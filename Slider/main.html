@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SLIDER</title>
+<style>
+* {box-sizing:border-box}
+
+/* Slideshow  */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+/* Next  previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* add next button  */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* add a yellow background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(255,255,0,0.8);
+}
+
+/*  text buttom center */
+.text {
+	color: #f2f2f2;
+	font-size: 35px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+
+/* Number text มุมซ้ายบน */
+.numbertext {
+  color: #FFF;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* dot */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #FF9;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #FC0;
+}
+
+/* animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+</style>
+</head>
+<body>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="img/1.jpg" width="700" height="550" style="width:100%">
+    <div class="text">ลานดาว</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="img/2.jpg" width="700" height="550" style="width:100%">
+    <div class="text">สมเด็จย่า</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="img/3.jpg" width="700" height="550" style="width:100%">
+    <div class="text">วิหารพระเจ้าล้านทอง</div>
+  </div>
+  
+   <div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="img/4.jpg" width="700" height="550" style="width:100%">
+    <div class="text">ศูนย์วัฒนธรรมและภาษาจีน</div>
+  </div>
+   <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="img/5.jpg" width="700" height="550" style="width:100%">
+    <div class="text">บรรยากาศในมหาวิทยาลัยแม่ฟ้าหลวง</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="current(1)"></span> 
+  <span class="dot" onclick="current(2)"></span> 
+  <span class="dot" onclick="current(3)"></span>
+  <span class="dot" onclick="current(4)"></span>
+  <span class="dot" onclick="current(5)"></span> 
+</div>
+
+<script src="show.js" type="text/javascript"></script>
+</body>
+</html>
